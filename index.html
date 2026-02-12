@@ -1,336 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  >
-<title>BrowzyMelt – Brownie Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>BrowzyMelt – Brownie Shop</title>
 
-<style>
-:root {
-  --brown: #4b1e1e;
-  --light: #fffaf6;
-}
+  <style>
+    :root {
+      --brown: #4b1e1e;
+      --light: #fffaf6;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: var(--light);
-  color: #333;
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--light);
+      color: #333;
+    }
 
-/* ---------- HEADER ---------- */
-header {
-  position:fixed;
-  top:0; width:100%;
-  background: white;
-  border-bottom: 1px solid #eee;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index:1000;
-}
+    /* ---------- HEADER ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
 
-header h1 {
-  color: var(--brown);
-  margin: 0;
-  font-size: 28px;
-}
+    header h1 {
+      color: var(--brown);
+      margin: 0;
+      font-size: 28px;
+    }
 
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
 
-nav a:hover {
-  color: var(--brown);
-}
+    nav a:hover {
+      color: var(--brown);
+    }
 
-/* ---------- HERO ---------- */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(to right, #3a1414, #6b2c2c);
-  color: white;
-}
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #3a1414, #6b2c2c);
+      color: white;
+    }
 
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-.hero p {
-  opacity: 0.9;
-}
+    .hero p {
+      opacity: 0.9;
+    }
 
-/* ---------- PRODUCTS ---------- */
-.products {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
+    /* ---------- PRODUCTS ---------- */
+    .products {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
 
-.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-}
+    .card:hover {
+      transform: translateY(-8px);
+    }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
 
-.card-content {
-  padding: 20px;
-  text-align: center;
-}
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
 
-.card-content h3 {
-  margin: 10px 0;
-}
+    .card-content h3 {
+      margin: 10px 0;
+    }
 
-.price {
-  font-weight: bold;
-  color: var(--brown);
-  margin-bottom: 15px;
-}
+    .price {
+      font-weight: bold;
+      color: var(--brown);
+      margin-bottom: 15px;
+    }
 
-button {
-  background: var(--brown);
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-}
+    button {
+      background: var(--brown);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-button:hover {
-  opacity: 0.9;
-}
+    button:hover {
+      opacity: 0.9;
+    }
 
-/* ---------- ORDER FORM ---------- */
-.order {
-  background: #f6efea;
-  padding: 50px 20px;
-}
+    /* ---------- ORDER FORM ---------- */
+    .order {
+      background: #f6efea;
+      padding: 50px 20px;
+    }
 
-.order h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
+    .order h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-form {
-  max-width: 500px;
-  margin: auto;
-}
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
 
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-footer {
-  background: var(--brown);
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-.video-hero {
-  position: relative;
-  overflow: hidden;
-  height: 70vh;
-}
+    footer {
+      background: var(--brown);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-.video-hero video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  left: 0;
-  top: 0;
-}
+    .video-hero {
+      position: relative;
+      overflow: hidden;
+      height: 70vh;
+    }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding-top: 150px;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  height: 100%;
-}
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #c5c8c6;
-  color: white;
-  font-size: 26px;
-  padding: 14px 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  z-index: 999;
-}
+    .video-hero video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      left: 0;
+      top: 0;
+    }
 
-.whatsapp-float:hover {
-  opacity: 0.9;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding-top: 150px;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      height: 100%;
+    }
 
-</style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #c5c8c6;
+      color: white;
+      font-size: 26px;
+      padding: 14px 16px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      opacity: 0.9;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about {
+      padding: 70px 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .about-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about h2 {
+      color: var(--brown);
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      line-height: 1.8;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .about {
+      scroll-margin-top: 100px;
+      /* Adjust if needed */
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>BrowzyMelt</h1>
-  <nav>
-    <a href="#">Gift Boxes</a>
-    <a 
-  href="https://wa.me/919876543210?text=Hi%20BrowzyMelt!%20I%20want%20to%20place%20an%20order%20🍫" 
-  target="_blank">
-  Contact
-</a>
+  <header>
+    <h1>BrowzyMelt</h1>
+    <nav>
 
-  </nav>
-</header>
+      <a href="https://wa.me/919876543210?text=Hi%20BrowzyMelt!%20I%20want%20to%20place%20an%20order%20🍫"
+        target="_blank">
+        Contact
+      </a>
+      <a href="#about">About Us</a>
 
-<!-- <section class="hero">
+    </nav>
+  </header>
+
+  <!-- <section class="hero">
   <h2>Freshly Baked Brownies</h2>
   <p>Pre-order only • Limited quantity per day</p>
 </section> -->
 
-<section class="hero video-hero">
-  <video autoplay muted loop playsinline>
-    <source src="C:\Users\Downloads\istockphoto-1368954410-640_adpp_is.mp4" type="video/mp4">
-  </video>
+  <section class="hero video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="C:\Users\Downloads\istockphoto-1368954410-640_adpp_is.mp4" type="video/mp4">
+    </video>
 
-  <div class="hero-content">
-    <h2>Freshly Baked Brownies</h2>
-    <p>Pre-order only • Limited quantity per day</p>
-  </div>
-</section>
-
-
-<section class="products">
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80">
-    <div class="card-content">
-      <h3>Classic Chocolate</h3>
-      <div class="price">₹80 | ₹450 | ₹850</div>
-      <button>Quick View</button>
+    <div class="hero-content">
+      <h2>Freshly Baked Brownies</h2>
+      <p>Pre-order only • Limited quantity per day</p>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80">
-    <div class="card-content">
-      <h3>Walnut Brownie</h3>
-      <div class="price">₹80 | ₹450 | ₹850</div>
-      <button>Quick View</button>
+
+  <section class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Classic Chocolate</h3>
+        <div class="price">₹80 | ₹450 | ₹850</div>
+        <button>Quick View</button>
+      </div>
     </div>
-  </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80">
-    <div class="card-content">
-      <h3>Nutella Brownie</h3>
-      <div class="price">₹80 | ₹450 | ₹850</div>
-      <button>Quick View</button>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Walnut Brownie</h3>
+        <div class="price">₹80 | ₹450 | ₹850</div>
+        <button>Quick View</button>
+      </div>
     </div>
-  </div>
 
-</section>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?auto=format&fit=crop&w=800&q=80">
+      <div class="card-content">
+        <h3>Nutella Brownie</h3>
+        <div class="price">₹80 | ₹450 | ₹850</div>
+        <button>Quick View</button>
+      </div>
+    </div>
 
-<section class="order">
-  <h2>Pre-Order Now</h2>
-  <form 
-  action="https://docs.google.com/forms/d/e/1FAIpQLSc169-5Kz9_rmlmyAO5o0cjyyTcxcucbDx1x7zDNsKrznGtwA/formResponse"
-  method="POST"
-  target="hidden_iframe"
-  onsubmit="submitted=true;"
->
+  </section>
 
-  <input type="text" name="entry.2005620554" placeholder="Name" required>
+  <section class="order">
+    <h2>Pre-Order Now</h2>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSc169-5Kz9_rmlmyAO5o0cjyyTcxcucbDx1x7zDNsKrznGtwA/formResponse"
+      method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
-  <input type="tel" name="entry.1166974658" placeholder="Phone" required>
+      <input type="text" name="entry.2005620554" placeholder="Name" required>
 
-  <input type="email" name="entry.1045781291" placeholder="Email Id" required>
+      <input type="tel" name="entry.1166974658" placeholder="Phone" required>
 
-  <select name="entry.1839581674" required>
-    <option value="">Select Flavor</option>
-    <option value="Classic Chocolate">Classic Chocolate</option>
-    <option value="Walnut">Walnut</option>
-    <option value="Choco Chip">Choco Chip</option>
-    <option value="Nutella">Nutella</option>
-    <option value="Triple Chocolate">Triple Chocolate</option>
-  </select>
+      <input type="email" name="entry.1045781291" placeholder="Email Id" required>
 
-  <select name="entry.577718683" required>
-    <option value="">Select Quantity</option>
-    <option value="Single_₹80">Single – ₹80</option>
-    <option value="Box of 6_₹450">Box of 6 – ₹450</option>
-    <option value="Box of 12_₹850">Box of 12 – ₹850</option>
-  </select>
+      <select name="entry.1839581674" required>
+        <option value="">Select Flavor</option>
+        <option value="Classic Chocolate">Classic Chocolate</option>
+        <option value="Walnut">Walnut</option>
+        <option value="Choco Chip">Choco Chip</option>
+        <option value="Nutella">Nutella</option>
+        <option value="Triple Chocolate">Triple Chocolate</option>
+      </select>
 
-  <textarea name="entry.1065046570" placeholder="Delievery Address" required></textarea>
+      <select name="entry.577718683" required>
+        <option value="">Select Quantity</option>
+        <option value="Single_₹80">Single – ₹80</option>
+        <option value="Box of 6_₹450">Box of 6 – ₹450</option>
+        <option value="Box of 12_₹850">Box of 12 – ₹850</option>
+      </select>
 
-  <textarea name="entry.839337160" placeholder="Comments(optional)"></textarea>
+      <textarea name="entry.1065046570" placeholder="Delievery Address" required></textarea>
 
-  <button type="submit">Place Pre-Order</button>
-</form>
+      <textarea name="entry.839337160" placeholder="Comments(optional)"></textarea>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+      <button type="submit">Place Pre-Order</button>
+    </form>
 
-</section>
-<p id="success" style="display:none; color:white; text-align:center; background-color: green;">
-  Order placed successfully! 🍫
-</p>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-<script>
-var submitted = false;
-document.querySelector("form").addEventListener("submit", function(){
-  setTimeout(() => {
-    document.getElementById("success").style.display = "block";
-  }, 800);
-});
-</script>
+  </section>
 
-<footer>
-  © 2026 BrowzyMelt • Pre-order only
-</footer>
-<a 
-  href="https://wa.me/919876543210?text=Hi%20BrowzyMelt!%20I%20want%20to%20order%20brownies%20🍫"
-  class="whatsapp-float"
-  target="_blank">
-  <i class="fa-brands fa-whatsapp" style="color: #008f18;"></i>
-</a>
+  <section class="about" id="about">
+    <div class="about-container">
+      <h2>About BrowzyMelt</h2>
+      <p>
+        At <strong>BrowzyMelt</strong>, we believe brownies should be more than just dessert —
+        they should be an experience. Every batch is freshly baked with premium
+        ingredients, rich cocoa, and lots of love to give you that perfect fudgy,
+        melt-in-your-mouth bite.
+      </p>
+
+      <p>
+        We operate on a <strong>pre-order only</strong> model to ensure quality, freshness,
+        and limited daily production. From our classic chocolate to indulgent Nutella
+        and crunchy walnut flavors, each brownie is crafted to satisfy your sweet cravings.
+      </p>
+
+      <p>
+        Whether you're celebrating a special moment or simply treating yourself,
+        BrowzyMelt is here to make every bite unforgettable. 🍫
+      </p>
+    </div>
+  </section>
+
+  <p id="success" style="display:none; color:white; text-align:center; background-color: green;">
+    Order placed successfully! 🍫
+  </p>
+
+  <script>
+    var submitted = false;
+    document.querySelector("form").addEventListener("submit", function () {
+      setTimeout(() => {
+        document.getElementById("success").style.display = "block";
+      }, 800);
+    });
+  </script>
+
+  <footer>
+    © 2026 BrowzyMelt • Pre-order only
+  </footer>
+  <a href="https://wa.me/919876543210?text=Hi%20BrowzyMelt!%20I%20want%20to%20order%20brownies%20🍫"
+    class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp" style="color: #008f18;"></i>
+  </a>
 
 </body>
+
 </html>
